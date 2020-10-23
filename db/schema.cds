@@ -96,27 +96,27 @@ entity mtx_department {
         long       : String(60); //긴 내역
 }
 
-//kpi unit 텍스트
-entity mtx_kpiunit {
-    key kpiunit : String(10); //kpi unit
-    key langu   : String(2); //언어
-        short   : String(20); //짧은 내역
-        middle  : String(40); //중간 내역
-        long    : String(60); //긴 내역
+//KPI 비교기준 텍스트
+entity mtx_kpistandrd {
+    key kpistandrd : String(10); //KPI 비교기준
+    key langu      : String(2); //언어
+        short      : String(20); //짧은 내역
+        middle     : String(40); //중간 내역
+        long       : String(60); //긴 내역
 }
 
-//kpi status 텍스트
-entity mtx_kpistatus {
-    key kpistatus : String(10); //kpi status
-    key langu     : String(2); //언어
-        short     : String(20); //짧은 내역
-        middle    : String(40); //중간 내역
-        long      : String(60); //긴 내역
+//KPI 비교등급 텍스트
+entity mtx_kpigrade {
+    key kpigrade : String(10); //KPI 비교등급
+    key langu    : String(2); //언어
+        short    : String(20); //짧은 내역
+        middle   : String(40); //중간 내역
+        long     : String(60); //긴 내역
 }
 
-//kpi operator 텍스트
+//KPI 비교연산자 텍스트
 entity mtx_kpioperator {
-    key kpioperator : String(10); //kpi operator
+    key kpioperator : String(10); //KPI 비교연산자
     key langu       : String(2); //언어
         short       : String(20); //짧은 내역
         middle      : String(40); //중간 내역
@@ -132,11 +132,11 @@ entity trx_kpi_input_s01 {
     key item          : String(10); //항목
     key cycle         : String(2); //주기
     key kpiseq        : Integer; //KPI Sequence
-        kpiunit       : String(10); //KPI unit
-        kpistatus     : String(10); //KPI status
-        kpioperator   : String(10); //KPI operator
-        kpi_min_value : Decimal(17, 3); // KPI minimum value
-        kpi_max_value : Decimal(17, 3); // KPI maximum value
+        kpistandrd    : String(10); //KPI 비교기준
+        kpigrade      : String(10); //KPI 비교등급
+        kpioperator   : String(10); //KPI 비교연산자
+        kpi_min_value : Decimal(17, 3); // KPI Minimum Value
+        kpi_max_value : Decimal(17, 3); // KPI Maximum Value
         detal_comment : String(1000); //상세설명
         attachedfile  : LargeBinary; //첨부파일
         createdat     : DateTime; //생성일자
