@@ -10,13 +10,13 @@ using {
     mtx_department  as masterText_department,
     mtx_kpiunit     as masterText_kpiunit,
     mtx_kpistatus   as masterText_kpistatus,
-    mtx_kpioperator as masterText_kpioperator
+    mtx_kpioperator as masterText_kpioperator,
+    trx_kpi_input_s01 as tranasction_kpiinputscreen01
 } from '../db/schema';
 
 
 service MasterData @(path : 'MasterData') {
 
-    @readonly
     view mtx_corpcode as select from masterText_corpcode;
 
     entity mtx_domain      as projection on masterText_domain;
@@ -30,5 +30,7 @@ service MasterData @(path : 'MasterData') {
     entity mtx_kpiunit     as projection on masterText_kpiunit;
     entity mtx_kpistatus   as projection on masterText_kpistatus;
     entity mtx_kpioperator as projection on masterText_kpioperator;
+
+    entity trx_kpi_input_s01 as projection on tranasction_kpiinputscreen01;
 
 }

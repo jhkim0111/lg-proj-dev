@@ -41,16 +41,9 @@ entity mat_item {
     key corp_cd       : String(10); //회사코드
     key domain        : String(10); //영역
     key item          : String(10); //항목
-        cycle         : String(2); //주기
+    key cycle         : String(2); //주기
         system        : String(20); //시스템
         detail_system : String(100); //상세시스템
-        manager       : String(10); //담당자
-        respn_prsn    : String(10); //책임자
-        kpiunit       : String(10); //KPI unit
-        kpistatus     : String(10); //KPI status
-        kpioperator   : String(10); //KPI operator
-        kpi_min_value : Decimal(17, 3); // KPI minimum value
-        kpi_max_value : Decimal(17, 3); // KPI maximum value
         createdat     : DateTime; //생성일자
         createdby     : String(10); //생성자(사원번호)
         modifiedat    : DateTime; //변경일자
@@ -131,3 +124,23 @@ entity mtx_kpioperator {
 }
 
 //transaction table
+
+// KPI 입력화면: S01
+entity trx_kpi_input_s01 {
+    key corp_cd       : String(10); //회사코드
+    key domain        : String(10); //영역
+    key item          : String(10); //항목
+    key cycle         : String(2); //주기
+    key kpiseq        : Integer; //KPI Sequence
+        kpiunit       : String(10); //KPI unit
+        kpistatus     : String(10); //KPI status
+        kpioperator   : String(10); //KPI operator
+        kpi_min_value : Decimal(17, 3); // KPI minimum value
+        kpi_max_value : Decimal(17, 3); // KPI maximum value
+        detal_comment : String(1000); //상세설명
+        attachedfile  : LargeBinary; //첨부파일
+        createdat     : DateTime; //생성일자
+        createdby     : String(10); //생성자(사원번호)
+        modifiedat    : DateTime; //변경일자
+        modifiedby    : String(10); //변경자(사원번호)
+}
