@@ -117,7 +117,7 @@ entity mtx_kpistatus {
 //kpi operator 텍스트
 entity mtx_kpioperator {
     key kpioperator : String(10); //kpi operator
-        langu       : String(2); //언어
+    key langu       : String(2); //언어
         short       : String(20); //짧은 내역
         middle      : String(40); //중간 내역
         long        : String(60); //긴 내역
