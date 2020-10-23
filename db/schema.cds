@@ -8,7 +8,7 @@ entity dummy {
 //회사코드 텍스트
 entity mtx_corpcode {
     key corp_cd : String(10); //회사코드
-        langu   : String(2); //언어
+    key langu   : String(2); //언어
         short   : String(20); //짧은 내역
         middle  : String(40); //중간 내역
         long    : String(60); //긴 내역
@@ -18,7 +18,7 @@ entity mtx_corpcode {
 entity mtx_domain {
     key corp_cd : String(10); //회사코드
     key domain  : String(10); //영역
-        langu   : String(2); //언어
+    key langu   : String(2); //언어
         short   : String(20); //짧은 내역
         middle  : String(40); //중간 내역
         long    : String(60); //긴 내역
@@ -30,7 +30,7 @@ entity mtx_item {
     key corp_cd : String(10); //회사코드
     key domain  : String(10); //영역
     key item    : String(10); //항목
-        langu   : String(2); //언어
+    key langu   : String(2); //언어
         short   : String(20); //짧은 내역
         middle  : String(40); //중간 내역
         long    : String(60); //긴 내역
@@ -55,7 +55,7 @@ entity mat_item {
 //주기 텍스트
 entity mtx_cycle {
     key cycle  : String(2); //주기
-        langu  : String(2); //언어
+    key langu  : String(2); //언어
         short  : String(20); //짧은 내역
         middle : String(40); //중간 내역
         long   : String(60); //긴 내역
@@ -64,7 +64,7 @@ entity mtx_cycle {
 //시스템 텍스트
 entity mtx_system {
     key system : String(20); //시스템
-        langu  : String(2); //언어
+    key langu  : String(2); //언어
         short  : String(20); //짧은 내역
         middle : String(40); //중간 내역
         long   : String(60); //긴 내역
@@ -81,7 +81,7 @@ entity mat_employee {
 //사원번호 텍스트
 entity mtx_employee {
     key employee : String(10); //사원번호
-        langu    : String(2); //언어
+    key langu    : String(2); //언어
         short    : String(20); //짧은 내역
         middle   : String(40); //중간 내역
         long     : String(60); //긴 내역
@@ -90,7 +90,7 @@ entity mtx_employee {
 //부서 텍스트
 entity mtx_department {
     key department : String(10); //부서
-        langu      : String(2); //언어
+    key langu      : String(2); //언어
         short      : String(20); //짧은 내역
         middle     : String(40); //중간 내역
         long       : String(60); //긴 내역
@@ -99,7 +99,7 @@ entity mtx_department {
 //kpi unit 텍스트
 entity mtx_kpiunit {
     key kpiunit : String(10); //kpi unit
-        langu   : String(2); //언어
+    key langu   : String(2); //언어
         short   : String(20); //짧은 내역
         middle  : String(40); //중간 내역
         long    : String(60); //긴 내역
@@ -108,7 +108,7 @@ entity mtx_kpiunit {
 //kpi status 텍스트
 entity mtx_kpistatus {
     key kpistatus : String(10); //kpi status
-        langu     : String(2); //언어
+    key langu     : String(2); //언어
         short     : String(20); //짧은 내역
         middle    : String(40); //중간 내역
         long      : String(60); //긴 내역
